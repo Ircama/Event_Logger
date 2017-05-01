@@ -1,0 +1,2 @@
+export PATH=/usr/local/cross/gcc-3.3.4_glibc-2.3.2/arm-linux/bin:$PATH:/usr/local/cross/gcc-3.3.4_glibc-2.3.2/bin
+gcc -Wall -fPIC -ldl -shared -o devshare.so devshare.c -O3 && strip devshare.so

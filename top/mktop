@@ -1,0 +1,10 @@
+exec=top
+if test "$1"
+   then export PATH=/usr/local/cross/gcc-3.3.4_glibc-2.3.2/arm-linux/bin:$PATH:/usr/local/cross/gcc-3.3.4_glibc-2.3.2/bin
+        gcc *.c ../fb.c -o $exec -Os -lm-2.3.2 -DARM -DNOZSH -DL_xstrdup
+        ls -l $exec
+        strip $exec
+        ls -l $exec
+   else
+        gcc *.c ../fb.c -o $exec -DNOZSH -DL_xstrdup -DHAVE_CONFIG_H
+fi

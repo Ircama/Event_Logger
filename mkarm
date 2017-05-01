@@ -1,0 +1,11 @@
+test "$1" && make $1
+export PATH=/usr/local/cross/gcc-3.3.4_glibc-2.3.2/arm-linux/bin:$PATH:/usr/local/cross/gcc-3.3.4_glibc-2.3.2/bin
+pwd
+make -f Makefile.arm
+ls -l zsh
+strip zsh
+ls -l zsh
+mv zsh bsh
+rm bsh.bz2
+bzip2 bsh
+ls -l bsh.bz2
